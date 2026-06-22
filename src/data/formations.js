@@ -1,0 +1,147 @@
+export const formations = [
+  {
+    id: 1,
+    titre: "Développeur Web et Web Mobile (DWWM)",
+    description: "Formation professionnelle certifiante pour devenir développeur web full-stack. Maîtrisez HTML, CSS, JavaScript, PHP et les frameworks modernes dans un parcours intensif de 12 mois.",
+    duree: "12 mois",
+    niveau: "Débutant",
+    prix: 3500,
+    image: "https://www.digitalschool.paris/wp-content/uploads/2022/12/Developpeur-Web.jpg",
+    programme: ["HTML5 & CSS3", "JavaScript ES6+", "PHP & MySQL", "Vue.js / React", "Git & GitHub", "Méthodologie Agile"],
+    certifiant: true,
+    places: 15
+  },
+  {
+    id: 2,
+    titre: "JavaScript Avancé & Node.js",
+    description: "Approfondissez vos connaissances en JavaScript avec ES6+, les design patterns avancés, et développez des applications backend robustes avec Node.js et Express.",
+    duree: "3 mois",
+    niveau: "Intermédiaire",
+    prix: 1200,
+    image: "https://www.softwebsolutions.com/wp-content/uploads/2023/11/Javascript-for-web-development.webp",
+    programme: ["ES6+ & asynchrone", "Node.js", "Express.js", "MongoDB", "REST API", "Tests unitaires"],
+    certifiant: false,
+    places: 12
+  },
+  {
+    id: 3,
+    titre: "Vue.js 3 & Nuxt",
+    description: "Maîtrisez le framework Vue.js 3 avec la Composition API, Vue Router et Pinia, puis déployez des applications SSR performantes avec Nuxt.js.",
+    duree: "2 mois",
+    niveau: "Intermédiaire",
+    prix: 900,
+    image: "https://www.cmarix.com/blog/wp-content/uploads/2025/01/Hire-Vue.js-Developers.webp",
+    programme: ["Vue 3 Composition API", "Vue Router", "Pinia", "Nuxt.js", "TypeScript", "Vitest"],
+    certifiant: false,
+    places: 10
+  },
+  {
+    id: 4,
+    titre: "React & Next.js",
+    description: "Développez des interfaces modernes avec React 18, les hooks avancés, Redux Toolkit et créez des applications full-stack avec Next.js et le App Router.",
+    duree: "3 mois",
+    niveau: "Intermédiaire",
+    prix: 1100,
+    image: "https://images.ctfassets.net/aq13lwl6616q/26YihBS082ssqu55s02tHb/827b9471c4660d9716d7a896b25dc204/Become_a_React_Developer.jpg",
+    programme: ["React 18 & Hooks", "Redux Toolkit", "Next.js App Router", "Server Components", "Prisma ORM", "Vercel"],
+    certifiant: false,
+    places: 12
+  },
+  {
+    id: 5,
+    titre: "Python & Django",
+    description: "Découvrez Python et créez des applications web robustes avec Django. Apprenez la programmation orientée objet et le développement d'API REST professionnelles.",
+    duree: "4 mois",
+    niveau: "Débutant",
+    prix: 1400,
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*4Zlz9EJCToZclQveC43GaA.jpeg",
+    programme: ["Python fondamentaux", "POO", "Django", "Django REST Framework", "PostgreSQL", "Docker"],
+    certifiant: false,
+    places: 15
+  },
+  {
+    id: 6,
+    titre: "DevOps & Cloud AWS",
+    description: "Automatisez vos déploiements, maîtrisez Docker, Kubernetes et les services AWS pour piloter des infrastructures cloud modernes et résilientes.",
+    duree: "3 mois",
+    niveau: "Avancé",
+    prix: 1800,
+    image: "https://backend.vlinkinfo.com/uploads/Top_Dev_Ops_automation_tools_d189d2e2f0.jpg",
+    programme: ["Linux avancé", "Docker & Compose", "Kubernetes", "CI/CD GitHub Actions", "AWS EC2/S3/RDS", "Terraform"],
+    certifiant: true,
+    places: 8
+  },
+  {
+    id: 7,
+    titre: "UX/UI Design & Figma",
+    description: "Concevez des interfaces utilisateurs intuitives et attractives. Maîtrisez Figma, les principes du design thinking et l'expérience utilisateur de A à Z.",
+    duree: "2 mois",
+    niveau: "Débutant",
+    prix: 850,
+    image: "https://media.licdn.com/dms/image/v2/D5612AQEToo1lXtf-mg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1703048579080?e=2147483647&v=beta&t=l4FEMZsP7S8fR9TMzhYmTzsGCtTm21gJNurMunCtObc",
+    programme: ["Principes UX", "Design System", "Figma avancé", "Prototypage", "Tests utilisateurs", "Accessibilité"],
+    certifiant: false,
+    places: 12
+  },
+  {
+    id: 8,
+    titre: "Cybersécurité Éthique",
+    description: "Apprenez à sécuriser vos applications et infrastructures. Maîtrisez les tests d'intrusion, l'OWASP Top 10 et les bonnes pratiques de la sécurité offensive et défensive.",
+    duree: "3 mois",
+    niveau: "Avancé",
+    prix: 1600,
+    image: "https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_1000,h_563/https://rendre-notre-monde-plus-sur.goron.fr/wp-content/uploads/2023/05/mai_-_auteur_cybermenace_copie.jpeg",
+    programme: ["OWASP Top 10", "Pentest web", "Sécurité réseau", "Cryptographie", "CTF challenges", "Prépa CEH"],
+    certifiant: true,
+    places: 8
+  },
+  {
+    id: 9,
+    titre: "Data Science & Machine Learning",
+    description: "Exploitez la puissance des données avec Python, pandas, scikit-learn et TensorFlow. Créez des modèles prédictifs et visualisez vos analyses de façon impactante.",
+    duree: "5 mois",
+    niveau: "Avancé",
+    prix: 2200,
+    image: "https://www.tech-wonders.com/wp-content/uploads/2019/12/data-scientist-vs-machine-learning-engineer-1024x725.jpg",
+    programme: ["Python & pandas", "NumPy & Matplotlib", "Machine Learning", "Deep Learning", "NLP", "MLOps"],
+    certifiant: true,
+    places: 10
+  },
+  {
+    id: 10,
+    titre: "Développement Mobile Flutter",
+    description: "Développez des applications mobiles cross-platform pour iOS et Android avec Flutter et Dart. De la conception au déploiement sur les stores en passant par Firebase.",
+    duree: "3 mois",
+    niveau: "Intermédiaire",
+    prix: 1300,
+    image: "https://www.xarala.co/blog/content/images/2022/07/flutter.png",
+    programme: ["Dart fondamentaux", "Flutter Widgets", "State Management", "Firebase", "API REST", "Publication stores"],
+    certifiant: false,
+    places: 12
+  },
+
+  {
+    id: 11,
+    titre: "Technicien Système Réseaux et Sécurité BAC+2",
+    description: "Le Technicien Systèmes Réseaux et Sécurité participe à la mise en service et au maintien en condition opérationnelle de l’infrastructure informatique.",
+    duree: "29 semaines en formation et 73 semaines en entreprise sur 2 ans",
+    niveau: "BAC",
+    prix: "En alternance",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxCXiQsliUHMMgZXKpFzFD5Zpk4oRxFygMxpqvbCM_AfRBFTpEfDFo1ikm&s=10",
+    programme: ["Installer", "Configurer", "déployer", "Linux", "Green IT", "Python"],
+    certifiant: false,
+    places: 19
+  },
+  {
+    id: 12,
+    titre: "Concepteur Développeur d’Applications BAC+4",
+    description: "Le Concepteur Développeur d’Applications anime et conduit la réalisation de projets",
+    duree: "31 semaines en formation et 70 semaines en entreprise sur 2 ans",
+    niveau: "BAC+2",
+    prix: "En alternance",
+    image: "https://www.aresformation.com/media/images/upload/concepteur-dev-app1.jpg",
+    programme: ["SQL", "Javascript", "PL-SQL", "SQL Server", "Java EE", "Symfony"],
+    certifiant: false,
+    places: 15
+  }
+]

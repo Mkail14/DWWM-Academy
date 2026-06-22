@@ -1,0 +1,267 @@
+.navbar-float-wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+/* ── Pilule générique ── */
+.dwwm-pill {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  background: rgba(61, 61, 61, 0.384);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  padding: 0.5rem 1.2rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* ── Séparateur vertical ── */
+.navbar-sep {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.473);
+  flex-shrink: 0;
+  margin: 0 0.15rem;
+}
+
+/* ── Marque ── */
+.navbar-brand-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #d1d1d1 !important;
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+/* ── Lien don ── */
+.nav-donation-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 0.35rem 0.65rem;
+  border-radius: 50px;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.nav-donation-link:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Bouton thème ── */
+.btn-theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 50px;
+  transition: background-color 0.2s;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.btn-theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Liens de navigation ── */
+.nav-link-item,
+.nav-link-exact {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem !important;
+  border-radius: 50px;
+  transition: color 0.2s, background-color 0.2s;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-link-item:hover,
+.nav-link-exact:hover {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-link-item.router-link-active,
+.nav-link-exact.router-link-exact-active {
+  background-color: rgba(255, 255, 255, 0.13);
+  color: #fff !important;
+}
+
+/* ── Badge favoris ── */
+.nav-favorites-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.badge-count {
+  position: absolute;
+  top: -2px;
+  right: 2px;
+  background: linear-gradient(135deg, #8b5cf6, #10b981);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border-radius: 50%;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.badge-count-mobile {
+  position: static;
+  min-width: 18px;
+  height: 18px;
+  font-size: 0.65rem;
+}
+
+/* ─────────────── Desktop / Mobile visibility ─────────────── */
+
+.navbar-mobile { display: none; }
+.navbar-mobile-panel { display: none; }
+
+/* ── Burger button ── */
+.btn-burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.btn-burger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.burger-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #d1d1d1;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animation X quand ouvert */
+.btn-burger.is-open .burger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.btn-burger.is-open .burger-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.btn-burger.is-open .burger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Panneau mobile ── */
+.navbar-mobile-panel {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(45, 45, 55, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 20px;
+  padding: 0.75rem 0.9rem;
+  width: 100%;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-mobile-panel.is-open {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.mobile-link {
+  width: 100%;
+  border-radius: 12px !important;
+  padding: 0.55rem 0.85rem !important;
+}
+
+.mobile-sep {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.4rem 0;
+}
+
+/* ─────────────── Breakpoint mobile ─────────────── */
+
+@media (max-width: 700px) {
+  .navbar-float-wrapper {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .navbar-desktop { display: none; }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-mobile-panel {
+    display: flex;
+  }
+}
+
+/* ── Tablette (701px – 900px) : une seule pilule compacte ── */
+@media (min-width: 701px) and (max-width: 900px) {
+  .navbar-float-wrapper {
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 6px;
+  }
+
+
+ 
+}
