@@ -8,7 +8,7 @@ import '../assets/css/home.css'
 const featured = computed(() => formations.slice(0, 3))
 
 const currentSlide = ref(0)
-const slides = ['/src/img/1.jpg', '/src/img/2.jpg', '/src/img/3.jpg']
+const slides = ['https://images.pexels.com/photos/7172094/pexels-photo-7172094.jpeg', 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg', 'https://www.cefii.fr/blog/wp-content/uploads/2023/09/formations-webdesign-developpement-1080x675.jpg']
 let timer = null
 
 function goTo(n) {
