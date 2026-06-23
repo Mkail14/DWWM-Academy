@@ -231,12 +231,18 @@
   object-fit: cover;
   opacity: 0;
   transform: translateX(100%);
-  transition: transform 0.5s ;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .slide.active {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* Slide sortante : part vers la gauche (au lieu de revenir à droite) */
+.slide.leaving {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 
 .slider-dots {

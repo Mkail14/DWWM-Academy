@@ -83,7 +83,7 @@ a:hover {
 
 .page-wrapper {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   min-height: 100vh;
   padding-top: 2rem;
   padding-bottom: 110px;

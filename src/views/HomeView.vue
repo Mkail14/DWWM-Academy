@@ -8,16 +8,26 @@ import '../assets/css/home.css'
 const featured = computed(() => formations.slice(0, 3))
 
 const currentSlide = ref(0)
+const leavingSlide = ref(-1)
 const slides = ['https://images.pexels.com/photos/7172094/pexels-photo-7172094.jpeg', 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg', 'https://www.cefii.fr/blog/wp-content/uploads/2023/09/formations-webdesign-developpement-1080x675.jpg']
 let timer = null
+let leaveTimer = null
+
+function switchTo(n) {
+  if (n === currentSlide.value) return
+  leavingSlide.value = currentSlide.value
+  currentSlide.value = n
+  clearTimeout(leaveTimer)
+  leaveTimer = setTimeout(() => { leavingSlide.value = -1 }, 550)
+}
 
 function goTo(n) {
-  currentSlide.value = n
+  switchTo(n)
   resetTimer()
 }
 
 function next() {
-  currentSlide.value = (currentSlide.value + 1) % slides.length
+  switchTo((currentSlide.value + 1) % slides.length)
 }
 
 function resetTimer() {
@@ -26,7 +36,7 @@ function resetTimer() {
 }
 
 onMounted(() => { timer = setInterval(next, 5000) })
-onUnmounted(() => clearInterval(timer))
+onUnmounted(() => { clearInterval(timer); clearTimeout(leaveTimer) })
 </script>
 
 <template>
@@ -52,7 +62,7 @@ onUnmounted(() => clearInterval(timer))
             <div class="hero-image-wrapper">
                 <div class="slider">
 
-                  <img v-for="(src, i) in slides":key="i":src="src" :class="['slide', { active: i === currentSlide }]" alt="Formation DWWM Academy"/>
+                  <img v-for="(src, i) in slides" :key="i" :src="src" :class="['slide', { active: i === currentSlide, leaving: i === leavingSlide }]" alt="Formation DWWM Academy"/>
                   <div class="slider-dots">
                        <button v-for="(_, i) in slides":key="i" :class="['slider-dot', { active: i === currentSlide }]" @click="goTo(i)" />
                   </div>
