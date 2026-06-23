@@ -47,12 +47,12 @@ onUnmounted(() => { clearInterval(timer); clearTimeout(leaveTimer) })
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
             <div class="hero-label">Centre de formation – Mayotte</div>
-            <h1 class="hero-title "> Formez-vous aux métiers du <span>numérique à Mayotte</span></h1>
+            <h1 class="hero-title "> Le monde de demain <span>numérique à Mayotte</span></h1>
             <p class="hero-subtitle">Rejoignez nos formations en développement web, cybersécurité, design et bien plus encore.</p>
 
             <div class="d-flex gap-3 flex-wrap">
-                  <RouterLink to="/catalogue" id="btn_acceuil" class="btn btn-accent btn-lg px-4">Voir le catalogue <i class="bi bi-arrow-right ms-2"></i></RouterLink>
-                  <RouterLink to="/contact" class="btn btn-outline-accent btn-lg px-4" id="contact">Nous contacter</RouterLink>
+                  <RouterLink to="/catalogue" id="btn_acceuil" class="btn btn-accent btn-lg px-4">Voir nos formations <i class="bi bi-arrow-right ms-2"></i></RouterLink>
+                  <RouterLink to="/contact" class="btn btn-outline-accent btn-lg px-4" id="contact">Contacter nous</RouterLink>
             </div>
 
 

@@ -13,10 +13,10 @@ import '../assets/css/footer.css'
             Centre de formation professionnelle spécialisé dans les métiers du numérique à Mayotte.
           </p>
           <div class="footer-socials mt-3">
-            <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" title="GitHub"><i class="bi bi-github"></i></a>
-            <a href="#" title="Twitter / X"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="" title="GitHub"><i class="bi bi-github"></i></a>
+            <a href="" title="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="" title="Facebook"><i class="bi bi-facebook"></i></a>
           </div>
         </div>
 
