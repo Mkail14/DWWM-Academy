@@ -47,7 +47,7 @@ onUnmounted(() => { clearInterval(timer); clearTimeout(leaveTimer) })
         <div class="row align-items-center g-5">
           <div class="col-lg-6">
             <div class="hero-label">Centre de formation – Mayotte</div>
-            <h1 class="hero-title "> Le monde de demain <span>numérique à Mayotte</span></h1>
+            <h1 class="hero-title "> Le monde de demain <span>le numérique à Mayotte</span></h1>
             <p class="hero-subtitle">Rejoignez nos formations en développement web, cybersécurité, design et bien plus encore.</p>
 
             <div class="d-flex gap-3 flex-wrap">
@@ -151,7 +151,7 @@ onUnmounted(() => { clearInterval(timer); clearTimeout(leaveTimer) })
           <h2 class="txt-fin">Prêt à démarrer votre parcours ?</h2>
           <p>Inscrivez-vous dès aujourd'hui ou contactez-nous pour obtenir plus d'informations sur nos formations.</p>
           <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <RouterLink to="/catalogue" class="btn btn-accent btn-lg px-5">
+            <RouterLink id="formation" to="/catalogue" class="btn btn-accent btn-lg px-5">
               <i class="bi bi-grid me-2"></i>Voir les formations
             </RouterLink>
             <RouterLink to="/contact" class="btn btn-outline-accent btn-lg px-5">
